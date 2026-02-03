@@ -1,225 +1,476 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Resume - Start Bootstrap Theme</title>
-        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-    </head>
-    <body id="page-top">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">
-                <span class="d-block d-lg-none">Clarence Taylor</span>
-                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" alt="..." /></span>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Bruno Fernandez portfolio: aerospace engineering, satellite systems, GNC, and AOCS projects." />
+    <meta name="author" content="Bruno Fernandez" />
+    <title>Bruno Fernandez | Portfolio</title>
+
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+
+    <!-- Font Awesome icons (free version) -->
+    <script
+      src="https://use.fontawesome.com/releases/v6.3.0/js/all.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- Core theme CSS (includes Bootstrap) -->
+    <link href="css/styles.css" rel="stylesheet" />
+
+    <!-- Theme color override (subtle dark blue) -->
+    <style>
+      :root {
+        --bf-primary: #0b1f3a; /* subtle dark blue */
+        --bf-primary-2: #12345f; /* hover shade */
+      }
+
+      .bg-primary {
+        background-color: var(--bf-primary) !important;
+      }
+      .text-primary {
+        color: var(--bf-primary) !important;
+      }
+      a {
+        color: var(--bf-primary);
+      }
+      a:hover,
+      a:focus {
+        color: var(--bf-primary-2);
+      }
+      .social-icons .social-icon:hover {
+        background-color: var(--bf-primary) !important;
+      }
+      .navbar-dark .navbar-nav .nav-link.active,
+      .navbar-dark .navbar-nav .nav-link:hover {
+        color: #ffffff !important;
+      }
+
+      /* Project images: consistent sizing without cropping weirdly */
+      .project-img {
+        width: 100%;
+        max-height: 260px;
+        object-fit: cover;
+      }
+
+      /* Slightly softer separators */
+      hr.m-0 {
+        opacity: 0.15;
+      }
+    </style>
+  </head>
+
+  <body id="page-top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">
+        <span class="d-block d-lg-none">Bruno Fernandez</span>
+        <span class="d-none d-lg-block">
+          <img
+            class="img-fluid img-profile rounded-circle mx-auto mb-2"
+            src="assets/img/profile.jpg"
+            alt="Profile photo"
+          />
+        </span>
+      </a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarResponsive"
+        aria-controls="navbarResponsive"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#certifications">Certifications</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#publications">Publications</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container-fluid p-0">
+      <!-- About -->
+      <section class="resume-section" id="about">
+        <div class="resume-section-content">
+          <h1 class="mb-0">
+            Bruno
+            <span class="text-primary">Fernandez</span>
+          </h1>
+
+          <div class="subheading mb-4">
+            São José dos Campos, SP, Brazil
+          </div>
+
+          <p class="lead mb-4">
+            Aerospace Engineer with a proven record in satellite systems and space flight dynamics. Former member of
+            the Aerospace Systems Laboratory at Brazil’s National Institute for Space Research (INPE) and currently
+            part of the Attitude and Orbit Control Systems (AOCS) team at the ITA Space Center (CEI). Team leader in
+            the hardware-in-the-loop attitude and orbit simulation project and Master's student at ITA.
+          </p>
+
+          <p class="lead mb-5">
+            Passionate about Guidance, Navigation &amp; Control (GNC), electronics and the rapidly evolving field of
+            nanosatellites. I am committed to advancing aeronautical and space-technology projects that bridge
+            research and real-world missions.
+          </p>
+
+          <div class="social-icons">
+            <a
+              class="social-icon"
+              href="https://www.linkedin.com/in/YOUR-LINKEDIN/"
+              target="_blank"
+              rel="noopener"
+              aria-label="LinkedIn"
+            >
+              <i class="fab fa-linkedin-in"></i>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Awards</a></li>
-                </ul>
-            </div>
-        </nav>
-        <!-- Page Content-->
-        <div class="container-fluid p-0">
-            <!-- About-->
-            <section class="resume-section" id="about">
-                <div class="resume-section-content">
-                    <h1 class="mb-0">
-                        Clarence
-                        <span class="text-primary">Taylor</span>
-                    </h1>
-                    <div class="subheading mb-5">
-                        3542 Berry Street · Cheyenne Wells, CO 80810 · (317) 585-8468 ·
-                        <a href="mailto:name@email.com">name@email.com</a>
-                    </div>
-                    <p class="lead mb-5">I am experienced in leveraging agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p>
-                    <div class="social-icons">
-                        <a class="social-icon" href="#!"><i class="fab fa-linkedin-in"></i></a>
-                        <a class="social-icon" href="#!"><i class="fab fa-github"></i></a>
-                        <a class="social-icon" href="#!"><i class="fab fa-twitter"></i></a>
-                        <a class="social-icon" href="#!"><i class="fab fa-facebook-f"></i></a>
-                    </div>
-                </div>
-            </section>
-            <hr class="m-0" />
-            <!-- Experience-->
-            <section class="resume-section" id="experience">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Experience</h2>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Senior Web Developer</h3>
-                            <div class="subheading mb-3">Intelitec Solutions</div>
-                            <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">March 2013 - Present</span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Web Developer</h3>
-                            <div class="subheading mb-3">Intelitec Solutions</div>
-                            <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">December 2011 - March 2013</span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Junior Web Designer</h3>
-                            <div class="subheading mb-3">Shout! Media Productions</div>
-                            <p>Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">July 2010 - December 2011</span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Web Design Intern</h3>
-                            <div class="subheading mb-3">Shout! Media Productions</div>
-                            <p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">September 2008 - June 2010</span></div>
-                    </div>
-                </div>
-            </section>
-            <hr class="m-0" />
-            <!-- Education-->
-            <section class="resume-section" id="education">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Education</h2>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">University of Colorado Boulder</h3>
-                            <div class="subheading mb-3">Bachelor of Science</div>
-                            <div>Computer Science - Web Development Track</div>
-                            <p>GPA: 3.23</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">August 2006 - May 2010</span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">James Buchanan High School</h3>
-                            <div class="subheading mb-3">Technology Magnet Program</div>
-                            <p>GPA: 3.56</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">August 2002 - May 2006</span></div>
-                    </div>
-                </div>
-            </section>
-            <hr class="m-0" />
-            <!-- Skills-->
-            <section class="resume-section" id="skills">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Skills</h2>
-                    <div class="subheading mb-3">Programming Languages & Tools</div>
-                    <ul class="list-inline dev-icons">
-                        <li class="list-inline-item"><i class="fab fa-html5"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-js-square"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-angular"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-react"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-node-js"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-sass"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-less"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-wordpress"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-gulp"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-grunt"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-npm"></i></li>
-                    </ul>
-                    <div class="subheading mb-3">Workflow</div>
-                    <ul class="fa-ul mb-0">
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Mobile-First, Responsive Design
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Cross Browser Testing & Debugging
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Cross Functional Teams
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Agile Development & Scrum
-                        </li>
-                    </ul>
-                </div>
-            </section>
-            <hr class="m-0" />
-            <!-- Interests-->
-            <section class="resume-section" id="interests">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Interests</h2>
-                    <p>Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking.</p>
-                    <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technology advancements in the front-end web development world.</p>
-                </div>
-            </section>
-            <hr class="m-0" />
-            <!-- Awards-->
-            <section class="resume-section" id="awards">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Awards & Certifications</h2>
-                    <ul class="fa-ul mb-0">
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            Google Analytics Certified Developer
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            Mobile Web Specialist - Google Certification
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            1
-                            <sup>st</sup>
-                            Place - University of Colorado Boulder - Emerging Tech Competition 2009
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            1
-                            <sup>st</sup>
-                            Place - University of Colorado Boulder - Adobe Creative Jam 2008 (UI Design Category)
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            2
-                            <sup>nd</sup>
-                            Place - University of Colorado Boulder - Emerging Tech Competition 2008
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            1
-                            <sup>st</sup>
-                            Place - James Buchanan High School - Hackathon 2006
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            3
-                            <sup>rd</sup>
-                            Place - James Buchanan High School - Hackathon 2005
-                        </li>
-                    </ul>
-                </div>
-            </section>
+            <a
+              class="social-icon"
+              href="https://github.com/BFernandez10"
+              target="_blank"
+              rel="noopener"
+              aria-label="GitHub"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
         </div>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-    </body>
+      </section>
+
+      <hr class="m-0" />
+
+      <!-- Projects -->
+      <section class="resume-section" id="projects">
+        <div class="resume-section-content">
+          <h2 class="mb-5">Projects</h2>
+
+          <!-- Project 1 -->
+          <div class="mb-5">
+            <h3 class="mb-3">Project Name 1 (Placeholder)</h3>
+            <img
+              class="img-fluid rounded mb-3 project-img"
+              src="assets/img/project-1.jpg"
+              alt="Project 1 image placeholder"
+            />
+            <p class="mb-0">
+              Placeholder text describing your participation in this project. Include your role, the problem, what you built,
+              key tools used, and the outcome. Keep it concrete and results oriented.
+            </p>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="mb-5">
+            <h3 class="mb-3">Project Name 2 (Placeholder)</h3>
+            <img
+              class="img-fluid rounded mb-3 project-img"
+              src="assets/img/project-2.jpg"
+              alt="Project 2 image placeholder"
+            />
+            <p class="mb-0">
+              Placeholder text describing your participation in this project. Highlight your contributions, interfaces with
+              hardware or simulation, and any verification or validation work.
+            </p>
+          </div>
+
+          <!-- Project 3 -->
+          <div>
+            <h3 class="mb-3">Project Name 3 (Placeholder)</h3>
+            <img
+              class="img-fluid rounded mb-3 project-img"
+              src="assets/img/project-3.jpg"
+              alt="Project 3 image placeholder"
+            />
+            <p class="mb-0">
+              Placeholder text describing your participation in this project. Mention scope, stakeholders, and what changed
+              because of your work.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <hr class="m-0" />
+
+      <!-- Experience -->
+      <section class="resume-section" id="experience">
+        <div class="resume-section-content">
+          <h2 class="mb-5">Experience</h2>
+
+          <!-- ITA Space Center - Team Leader -->
+          <div class="d-flex flex-column flex-md-row justify-content-between mb-4">
+            <div class="flex-grow-1">
+              <h3 class="mb-0">ITA Space Center, São José dos Campos - SP, Brazil</h3>
+              <div class="subheading mb-3">Team Leader</div>
+              <ul class="mb-0">
+                <li>
+                  Developed and validated via STK a Matlab/Simulink-based GNC simulations and hardware-in-the-loop (HIL)
+                  setups for satellite Attitude and Orbit Control Subsystem (AOCS) applications in the ITASAT-2 mission
+                  and the SelenITA lunar mission, enhancing system reliability.
+                </li>
+                <li>
+                  Planned and executed test plans, procedures, and integration setups, conducting both virtual and HIL
+                  validation campaigns through real-time Simulink models interfaced with embedded hardware.
+                </li>
+                <li>
+                  Supported the assembly, integration, and testing (AIT) of control hardware and real-time interfaces with
+                  development boards (Arduino-class and microcontroller platforms) to verify control loop performance and
+                  communication reliability.
+                </li>
+                <li>
+                  Led a cross-functional international team of four (two French interns and two senior Brazilian students),
+                  fostering collaboration and ensuring on-time delivery across software, electronics, and testing domains.
+                </li>
+                <li>
+                  Conducted the project management and the systems engineering to translate test outcomes into mission-level
+                  verification deliverables aligned with schedule and system requirements.
+                </li>
+              </ul>
+            </div>
+            <div class="flex-shrink-0">
+              <span class="text-primary">January 2025 - Ongoing</span>
+            </div>
+          </div>
+
+          <!-- ITA Space Center - Engineering intern -->
+          <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+            <div class="flex-grow-1">
+              <div class="subheading mb-3">Engineering intern</div>
+              <ul class="mb-0">
+                <li>
+                  Developed a test plan, including procedures and instructions, for an automated gimbal used in the
+                  characterization and verification testing of gyroscopes for small satellite attitude determination and
+                  control.
+                </li>
+                <li>
+                  Designed and implemented testing methodologies to ensure the reliability and accuracy of gyroscopes in
+                  satellite applications with Matlab.
+                </li>
+                <li>
+                  Collaborated with the Space Solutions laboratory at the ITA Space Center CEI to assist in tests conducted
+                  on small satellites.
+                </li>
+              </ul>
+            </div>
+            <div class="flex-shrink-0">
+              <span class="text-primary">September 2024 - December 2024</span>
+            </div>
+          </div>
+
+          <!-- Tau Rocket Team -->
+          <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+            <div class="flex-grow-1">
+              <h3 class="mb-0">Tau Rocket Team, Universidade Federal de Santa Maria, Santa Maria - RS, Brazil</h3>
+              <div class="subheading mb-3">Electronics Department Developer</div>
+              <ul class="mb-0">
+                <li>
+                  Implemented a 500 m rocket's electrical subsystem and payload launched at the 2023 Latin American Space
+                  Cooperation competition.
+                </li>
+                <li>
+                  Designed PCBs with EasyEDA and validated rocket communication with LoRa in ESP32 boards.
+                </li>
+                <li>
+                  Published works in Regional Aerospace and Mechanical Engineering Symposium.
+                </li>
+              </ul>
+            </div>
+            <div class="flex-shrink-0">
+              <span class="text-primary">October 2021 - December 2023</span>
+            </div>
+          </div>
+
+          <!-- INPE -->
+          <div class="d-flex flex-column flex-md-row justify-content-between">
+            <div class="flex-grow-1">
+              <h3 class="mb-0">National Institute for Space Research (INPE), Space Systems Engineering Laboratory, Santa Maria - RS, Brazil</h3>
+              <div class="subheading mb-3">Undergraduate Research Scholarship Holder</div>
+              <ul class="mb-0">
+                <li>
+                  Developed an Electrical Power Subsystem (EPS) concept for the NANOSATC-BR3, from the NANOSATC-BR Program
+                  as an undergraduate research project (PIBIC) with INCOSE’s systems engineering approach.
+                </li>
+                <li>
+                  Presented and published research project in 2020’s online SICINPE, INPE’s annual seminar for scientific
+                  research students.
+                </li>
+              </ul>
+            </div>
+            <div class="flex-shrink-0">
+              <span class="text-primary">April 2019 - July 2020</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="m-0" />
+
+      <!-- Education -->
+      <section class="resume-section" id="education">
+        <div class="resume-section-content">
+          <h2 class="mb-5">Education</h2>
+
+          <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+            <div class="flex-grow-1">
+              <h3 class="mb-0">Instituto Tecnológico de Aeronáutica (ITA), São José dos Campos - SP, Brazil</h3>
+              <div class="subheading mb-3">Master of Science in Aeronautical and Mechanical Engineering - Major in Space Engineering</div>
+              <p class="mb-1">Supervisor: Willer Gomes dos Santos, Ph.D.</p>
+              <p class="mb-0">Membership: E2MoC Lab: Space Systems Engineering, Orbital Mechanics and Control Research Group</p>
+            </div>
+            <div class="flex-shrink-0"><span class="text-primary">February 2025 - Ongoing</span></div>
+          </div>
+
+          <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+            <div class="flex-grow-1">
+              <h3 class="mb-0">Instituto Tecnológico de Aeronáutica (ITA), São José dos Campos - SP, Brazil</h3>
+              <div class="subheading mb-3">Postgraduate Degree: Specialization in Aviation Safety and Continuing Airworthiness (445 h)</div>
+              <p class="mb-0">Final Project: Sociotechnical safety analysis for a small satellite attitude and orbit control subsystem using STPA.</p>
+            </div>
+            <div class="flex-shrink-0"><span class="text-primary">January 2025 - November 2025</span></div>
+          </div>
+
+          <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+            <div class="flex-grow-1">
+              <h3 class="mb-0">Vrije Universiteit Brussel (VUB), Brussels, Belgium</h3>
+              <div class="subheading mb-3">Exchange Student: Master of Science in Electromechanical Engineering - Major in Aeronautics</div>
+            </div>
+            <div class="flex-shrink-0"><span class="text-primary">February 2023 - July 2023</span></div>
+          </div>
+
+          <div class="d-flex flex-column flex-md-row justify-content-between">
+            <div class="flex-grow-1">
+              <h3 class="mb-0">Universidade Federal de Santa Maria (UFSM), Santa Maria - RS, Brazil</h3>
+              <div class="subheading mb-3">Bachelor of Science: Major in Aerospace Engineering</div>
+              <p class="mb-1">Final Project: Test plan for gyroscope characterization with mathematical modelling applied to space navigation.</p>
+              <p class="mb-0">
+                Memberships: NANOSATC-BR, Development of Nanosats Research Group. Member of the Pilot School of Mechanical Engineering.
+                Member of ABCM’s XXVIII Mechanical Engineering Students’ National Congress Commission. Tau Rocket Team’s Electronic Department.
+                Member of GEPROP - Propulsion Research Group.
+              </p>
+            </div>
+            <div class="flex-shrink-0"><span class="text-primary">March 2019 - December 2024</span></div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="m-0" />
+
+      <!-- Skills -->
+      <section class="resume-section" id="skills">
+        <div class="resume-section-content">
+          <h2 class="mb-5">Skills</h2>
+
+          <div class="subheading mb-3">CAE</div>
+          <p>SolidWorks, SolidWorks Simulation, Ansys Fluent, STK, FreeFlyer, Capella</p>
+
+          <div class="subheading mb-3">Electronics</div>
+          <p>Arduino, ESP32, Raspberry Pi</p>
+
+          <div class="subheading mb-3">Programming languages</div>
+          <p>C/C++, Python, Matlab, Simulink</p>
+
+          <div class="subheading mb-3">Office and writing</div>
+          <p>Microsoft Office, Google Docs, Latex</p>
+
+          <div class="subheading mb-3">Languages</div>
+          <p class="mb-0">Portuguese (native), English (fluent), French, and Spanish (intermediate)</p>
+        </div>
+      </section>
+
+      <hr class="m-0" />
+
+      <!-- Certifications -->
+      <section class="resume-section" id="certifications">
+        <div class="resume-section-content">
+          <h2 class="mb-5">Certifications</h2>
+          <ul class="fa-ul mb-0">
+            <li>
+              <span class="fa-li"><i class="fas fa-certificate text-primary"></i></span>
+              Placeholder certification 1
+            </li>
+            <li>
+              <span class="fa-li"><i class="fas fa-certificate text-primary"></i></span>
+              Placeholder certification 2
+            </li>
+            <li>
+              <span class="fa-li"><i class="fas fa-certificate text-primary"></i></span>
+              Placeholder certification 3
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <hr class="m-0" />
+
+      <!-- Publications -->
+      <section class="resume-section" id="publications">
+        <div class="resume-section-content">
+          <h2 class="mb-5">Publications</h2>
+          <ul class="fa-ul mb-0">
+            <li>
+              <span class="fa-li"><i class="fas fa-book text-primary"></i></span>
+              Placeholder publication 1 (Title, venue, year)
+            </li>
+            <li>
+              <span class="fa-li"><i class="fas fa-book text-primary"></i></span>
+              Placeholder publication 2 (Title, venue, year)
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <hr class="m-0" />
+
+      <!-- Contact -->
+      <section class="resume-section" id="contact">
+        <div class="resume-section-content">
+          <h2 class="mb-5">Contact</h2>
+
+          <p class="mb-2"><strong>Email:</strong> YOUR-EMAIL@example.com</p>
+          <p class="mb-4"><strong>LinkedIn:</strong> YOUR-LINKEDIN-URL</p>
+
+          <div class="social-icons">
+            <a
+              class="social-icon"
+              href="https://www.linkedin.com/in/YOUR-LINKEDIN/"
+              target="_blank"
+              rel="noopener"
+              aria-label="LinkedIn"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Bootstrap core JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core theme JS -->
+    <script src="js/scripts.js"></script>
+  </body>
 </html>
