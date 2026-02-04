@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Project case study: ITASAT-2 Hardware-in-the-Loop Roadmap for AOCS." />
+    <meta name="author" content="Bruno Fernandez" />
+    <title>ITASAT-2 HIL Roadmap | Bruno F. R. de Sousa</title>
+
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+
+    <link href="css/styles.css" rel="stylesheet" />
+
+    <style>
+      :root { --bf-primary: #0b1f3a; --bf-primary-2: #12345f; }
+      .bg-primary { background-color: var(--bf-primary) !important; }
+      .text-primary { color: var(--bf-primary) !important; }
+      a { color: var(--bf-primary); }
+      a:hover, a:focus { color: var(--bf-primary-2); }
+
+      .btn-primary { background-color: var(--bf-primary) !important; border-color: var(--bf-primary) !important; }
+      .btn-primary:hover, .btn-primary:focus { background-color: var(--bf-primary-2) !important; border-color: var(--bf-primary-2) !important; }
+
+      .resume-section { padding-top: 2.5rem !important; padding-bottom: 2.5rem !important; }
+      hr.m-0 { opacity: 0.15; }
+
+      .project-hero-img {
+        width: 100%;
+        max-height: 380px;
+        object-fit: cover;
+      }
+
+      .callout {
+        border: 1px solid rgba(0,0,0,0.10);
+        border-radius: 0.75rem;
+        padding: 1rem 1.25rem;
+        background: rgba(0,0,0,0.02);
+      }
+    </style>
+  </head>
+
+  <body id="page-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+      <a class="navbar-brand" href="index.html">
+        <span class="d-block d-lg-none">Bruno Fernandez</span>
+        <span class="d-none d-lg-block">
+          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" alt="Profile photo" />
+        </span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html#projects">Back to Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.linkedin.com/in/brunofernandezdesousa/" target="_blank" rel="noopener">LinkedIn</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-fluid p-0">
+      <section class="resume-section" id="project">
+        <div class="resume-section-content">
+          <a class="btn btn-primary mb-4" href="index.html#projects">
+            <i class="fas fa-arrow-left me-2"></i> Back to Projects
+          </a>
+
+          <h1 class="mb-1">ITASAT-2 Hardware-in-the-Loop Roadmap for AOCS</h1>
+          <div class="subheading mb-4">ITA Space Center (CEI) · E2MoC Lab · Ongoing</div>
+
+          <img class="img-fluid rounded mb-4 project-hero-img" src="assets/img/project-1.jpg" alt="ITASAT-2 HIL project image" />
+
+          <div class="row g-4">
+            <div class="col-lg-8">
+              <h2 class="mb-3">What it is</h2>
+              <p>
+                This project defines an end-to-end hardware-in-the-loop (HIL) implementation roadmap for the ITASAT-2
+                microsatellite Attitude and Orbit Control Subsystem (AOCS). The roadmap connects simulation, emulation,
+                and verification deliverables into a cohesive flow that can be executed with COTS components and
+                realistic embedded constraints.
+              </p>
+
+              <h2 class="mt-4 mb-3">Motivation</h2>
+              <p>
+                Small satellites often face limited budget, schedule pressure, and high integration risk. A structured HIL
+                plan reduces verification uncertainty by allowing closed-loop testing earlier, validating interfaces,
+                and improving confidence in control performance before later integration stages.
+              </p>
+
+              <h2 class="mt-4 mb-3">My contribution</h2>
+              <ul>
+                <li>Defined the implementation plan and verification flow linking simulation, emulation, and test campaigns.</li>
+                <li>Applied a hybrid PMBOK approach to structure work packages, WBS, and a Gantt schedule for team execution.</li>
+                <li>Started an attitude and orbit control simulator in MATLAB using mission-representative dynamics and data.</li>
+                <li>Specified STM development boards to emulate a flat-sat architecture for closed-loop testing.</li>
+                <li>Aligned technical outputs with verification deliverables and project constraints.</li>
+              </ul>
+
+              <h2 class="mt-4 mb-3">Results</h2>
+              <ul>
+                <li>Baseline HIL roadmap and verification plan drafted and validated with stakeholder inputs.</li>
+                <li>Initial MATLAB simulation baseline established to support test development and iteration.</li>
+                <li>Hardware emulation direction defined (STM-based flat-sat), enabling next integration steps.</li>
+                <li>Project remains ongoing, prioritizing simulation verisimilitude and physical emulation readiness.</li>
+              </ul>
+
+              <h2 class="mt-4 mb-3">Artifacts and links</h2>
+              <ul>
+                <li><strong>Report:</strong> Placeholder</li>
+                <li><strong>Slides:</strong> Placeholder</li>
+                <li><strong>Repository:</strong> Placeholder</li>
+              </ul>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="callout">
+                <h3 class="h5 mb-3">Highlights</h3>
+                <ul class="mb-0">
+                  <li>HIL roadmap for AOCS verification</li>
+                  <li>COTS and embedded constraints considered</li>
+                  <li>Hybrid PMBOK planning (WBS, Gantt)</li>
+                  <li>MATLAB simulation + STM flat-sat emulation path</li>
+                </ul>
+              </div>
+
+              <div class="callout mt-4">
+                <h3 class="h5 mb-3">Contact</h3>
+                <p class="mb-2"><strong>Email:</strong> bruno-frds@hotmail.com</p>
+                <a class="btn btn-primary w-100" href="https://www.linkedin.com/in/brunofernandezdesousa/" target="_blank" rel="noopener">
+                  <i class="fab fa-linkedin-in me-2"></i> LinkedIn
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
