@@ -33,59 +33,80 @@
     <!-- Theme color override (subtle dark blue) -->
     <style>
       :root {
-        --bf-primary: #0b1f3a; /* subtle dark blue */
-        --bf-primary-2: #12345f; /* hover shade */
+        --bf-primary: #0b1f3a;
+        --bf-primary-2: #12345f;
       }
 
-      .bg-primary {
-        background-color: var(--bf-primary) !important;
-      }
-      .text-primary {
-        color: var(--bf-primary) !important;
-      }
-      a {
-        color: var(--bf-primary);
-      }
-      a:hover,
-      a:focus {
-        color: var(--bf-primary-2);
-      }
-      .social-icons .social-icon:hover {
-        background-color: var(--bf-primary) !important;
-      }
+      .bg-primary { background-color: var(--bf-primary) !important; }
+      .text-primary { color: var(--bf-primary) !important; }
+
+      a { color: var(--bf-primary); }
+      a:hover, a:focus { color: var(--bf-primary-2); }
+
+      .social-icons .social-icon:hover { background-color: var(--bf-primary) !important; }
       .navbar-dark .navbar-nav .nav-link.active,
-      .navbar-dark .navbar-nav .nav-link:hover {
-        color: #ffffff !important;
+      .navbar-dark .navbar-nav .nav-link:hover { color: #ffffff !important; }
+
+      /* Buttons, to match the theme */
+      .btn-primary {
+        background-color: var(--bf-primary) !important;
+        border-color: var(--bf-primary) !important;
+      }
+      .btn-primary:hover,
+      .btn-primary:focus {
+        background-color: var(--bf-primary-2) !important;
+        border-color: var(--bf-primary-2) !important;
       }
 
-      /* Project images: consistent sizing without cropping weirdly */
-      .project-img {
-        width: 100%;
-        max-height: 260px;
-        object-fit: cover;
-      }
-
-      /* Slightly softer separators */
-      hr.m-0 {
-        opacity: 0.15;
-      }
       /* Reduce vertical spacing between sections */
       .resume-section {
         padding-top: 2.5rem !important;
         padding-bottom: 2.5rem !important;
       }
 
-      /* Optional: tighten section headings a bit */
-      /*.resume-section-content h2 {
-        margin-bottom: 2rem !important;
-      }*/
+      hr.m-0 { opacity: 0.15; }
+
+      /* Project card styling */
+      .project-card {
+        border: 1px solid rgba(0,0,0,0.10);
+        border-radius: 0.75rem;
+        overflow: hidden;
+        transition: transform 0.15s ease, box-shadow 0.15s ease;
+      }
+      .project-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 22px rgba(0,0,0,0.10);
+      }
+
+      .project-img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        display: block;
+      }
+
+      .project-card-body {
+        padding: 1rem 1.25rem;
+      }
+
+      .project-meta {
+        color: rgba(0,0,0,0.60);
+        font-size: 0.95rem;
+      }
+
+      .project-cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        font-weight: 700;
+      }
     </style>
   </head>
 
   <body id="page-top">
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">
+      <a class="navbar-brand js-scroll-trigger" href="index.html">
         <span class="d-block d-lg-none">Bruno Fernandez</span>
         <span class="d-none d-lg-block">
           <img
@@ -112,10 +133,6 @@
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
           <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
-          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
-          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
-          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#certifications">Certifications</a></li>
           <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#publications">Publications</a></li>
           <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
         </ul>
@@ -137,360 +154,118 @@
           </div>
 
           <p class="lead mb-4">
-            Aerospace Engineer with a proven record in satellite systems and space flight dynamics. Specialist in 
+            Aerospace Engineer with a proven record in satellite systems and space flight dynamics. Specialist in
             aviation safety and continued airworthiness. Former member of
             the Aerospace Systems Laboratory at Brazil’s National Institute for Space Research (INPE) and currently
             part of the Attitude and Orbit Control Systems (AOCS) team at the ITA Space Center (CEI). Team leader in
             the hardware-in-the-loop attitude and orbit simulation project and Master's student at ITA.
           </p>
 
-          <p class="lead mb-5">
+          <p class="lead mb-4">
             Passionate about Guidance, Navigation &amp; Control (GNC), electronics and the rapidly evolving field of
             nanosatellites. I am committed to advancing aeronautical and space-technology projects that bridge
             research and real-world missions.
           </p>
 
-            <div class="social-icons">
-                <a
-                    class="social-icon"
-                    href="https://www.linkedin.com/in/brunofernandezdesousa/"
-                    target="_blank"
-                    rel="noopener"
-                    aria-label="LinkedIn"
-                >
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-            </div>
+          <div class="social-icons">
+            <a
+              class="social-icon"
+              href="https://www.linkedin.com/in/brunofernandezdesousa/"
+              target="_blank"
+              rel="noopener"
+              aria-label="LinkedIn"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
       </section>
 
       <hr class="m-0" />
 
-    <!-- Projects -->
-    <section class="resume-section" id="projects">
+      <!-- Projects (focus) -->
+      <section class="resume-section" id="projects">
         <div class="resume-section-content">
-            <h2 class="mb-5">Projects</h2>
-
-            <!-- Project 1 -->
-            <div class="mb-5">
-            <h3 class="mb-3">ITASAT-2 Hardware-in-the-Loop Roadmap for AOCS Verification</h3>
-
-            <!-- Project image placeholder -->
-            <img
-                class="img-fluid rounded mb-3 project-img"
-                src="assets/img/project-1.jpg"
-                alt="ITASAT-2 HIL project image"
-            />
-
-            <p class="mb-2">
-                Led the definition of a hardware-in-the-loop (HIL) implementation plan for the ITASAT-2 microsatellite at the
-                ITA Space Center (CEI) through the E2MoC Lab. The work structured the end-to-end steps required to bring COTS
-                components into a realistic Attitude and Orbit Control Subsystem (AOCS) verification flow, aligning simulation
-                fidelity with practical embedded constraints.
-            </p>
-
-            <p class="mb-2">
-                Managed the project using a hybrid PMBOK approach, producing a Work Breakdown Structure (WBS), work packages, and
-                a Gantt schedule within a multidisciplinary and international team. Built the foundation of an attitude and orbit
-                control simulator in MATLAB using mission-representative data, and specified STM development boards to emulate a
-                flat-sat architecture for closed-loop testing.
-            </p>
-
-            <p class="mb-0">
-                The project is ongoing, prioritizing both simulation verisimilitude and physical emulation to generate
-                verification-ready deliverables for mission use.
-            </p>
-            </div>
-
-            <!-- Project 2 -->
-            <div class="mb-5">
-            <h3 class="mb-3">University Rocket Avionics and Ground Segment Communications</h3>
-
-            <!-- Project image placeholder -->
-            <img
-                class="img-fluid rounded mb-3 project-img"
-                src="assets/img/project-2.jpg"
-                alt="University rocket avionics project image"
-            />
-
-            <p class="mb-2">
-                Co-founded the first rocketry team at Universidade Federal de Santa Maria (UFSM) and contributed to the avionics
-                development of a 1 km-range university rocket. The team designed, built, and launched UFSM’s first rocket at the
-                Latin America Space Challenge 2023.
-            </p>
-
-            <p class="mb-2">
-                Helped structure the team and define the avionics architecture, including communications and test strategy with
-                the ground segment. Participated in implementation and verification activities to improve link reliability and
-                ensure the onboard electronics met flight and competition requirements.
-            </p>
-
-            <p class="mb-0">
-                This project strengthened my hands-on experience with embedded systems, integration testing, and real-world
-                operational constraints in a fast-paced build and launch cycle.
-            </p>
-            </div>
-
-            <!-- Project 3 -->
-            <div class="mb-5">
-            <h3 class="mb-3">MEMS Gyroscope Characterization Manual for Small-Satellite Navigation</h3>
-
-            <!-- Project image placeholder -->
-            <img
-                class="img-fluid rounded mb-3 project-img"
-                src="assets/img/project-3.jpg"
-                alt="MEMS gyroscope characterization project image"
-            />
-
-            <p class="mb-2">
-                Authored a practical manual for characterizing tri-axial MEMS gyroscopes for space-navigation applications,
-                tailored to small-satellite constraints. Using test data from the SPORT mission, I defined a repeatable workflow
-                for computing Allan variance and translating results into mathematical models that predict sensor bias behavior.
-            </p>
-
-            <p class="mb-2">
-                The work also assessed axis-dependent non-linearities and their impact on model accuracy, enabling more grounded
-                expectations for attitude estimation performance during design and test campaigns.
-            </p>
-
-            <p class="mb-0">
-                The manual is available to the ITA Space Center community and supports consistent, traceable gyro verification for
-                future missions.
-            </p>
-            </div>
-
-            <!-- Project 4 -->
+          <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-4">
             <div>
-            <h3 class="mb-3">Electrical Power Subsystem Concept Definition for NANOSATC-BR3</h3>
-
-            <!-- Project image placeholder -->
-            <img
-                class="img-fluid rounded mb-3 project-img"
-                src="assets/img/project-4.jpg"
-                alt="NANOSATC-BR3 EPS concept project image"
-            />
-
-            <p class="mb-2">
-                Developed the Electrical Power Subsystem (EPS) concept for the NANOSATC-BR3 nanosatellite, the third mission in
-                the NANOSATC-BR family. The work produced a structured concept plan grounded in literature and heritage practices
-                from NANOSATC-BR1, supporting early design decisions and traceability.
-            </p>
-
-            <p class="mb-0">
-                This contribution strengthened my systems-engineering foundation in spacecraft power architecture, requirements
-                thinking, and design justification under real mission constraints.
-            </p>
-            </div>
-        </div>
-    </section>
-
-
-      <hr class="m-0" />
-
-      <!-- Experience -->
-      <section class="resume-section" id="experience">
-        <div class="resume-section-content">
-          <h2 class="mb-5">Experience</h2>
-
-          <!-- ITA Space Center - Team Leader -->
-          <div class="d-flex flex-column flex-md-row justify-content-between mb-4">
-            <div class="flex-grow-1">
-              <h3 class="mb-0">ITA Space Center, São José dos Campos - SP, Brazil</h3>
-              <div class="subheading mb-3">Team Leader</div>
-              <ul class="mb-0">
-                <li>
-                  Developed and validated via STK a Matlab/Simulink-based GNC simulations and hardware-in-the-loop (HIL)
-                  setups for satellite Attitude and Orbit Control Subsystem (AOCS) applications in the ITASAT-2 mission
-                  and the SelenITA lunar mission, enhancing system reliability.
-                </li>
-                <li>
-                  Planned and executed test plans, procedures, and integration setups, conducting both virtual and HIL
-                  validation campaigns through real-time Simulink models interfaced with embedded hardware.
-                </li>
-                <li>
-                  Supported the assembly, integration, and testing (AIT) of control hardware and real-time interfaces with
-                  development boards (Arduino-class and microcontroller platforms) to verify control loop performance and
-                  communication reliability.
-                </li>
-                <li>
-                  Led a cross-functional international team of four (two French interns and two senior Brazilian students),
-                  fostering collaboration and ensuring on-time delivery across software, electronics, and testing domains.
-                </li>
-                <li>
-                  Conducted the project management and the systems engineering to translate test outcomes into mission-level
-                  verification deliverables aligned with schedule and system requirements.
-                </li>
-              </ul>
-            </div>
-            <div class="flex-shrink-0">
-              <span class="text-primary">January 2025 - Ongoing</span>
+              <h2 class="mb-2">Projects</h2>
+              <div class="project-meta">
+                Click a project to open its full case study (motivation, contribution, results).
+              </div>
             </div>
           </div>
 
-          <!-- ITA Space Center - Engineering intern -->
-          <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-            <div class="flex-grow-1">
-              <div class="subheading mb-3">Engineering intern</div>
-              <ul class="mb-0">
-                <li>
-                  Developed a test plan, including procedures and instructions, for an automated gimbal used in the
-                  characterization and verification testing of gyroscopes for small satellite attitude determination and
-                  control.
-                </li>
-                <li>
-                  Designed and implemented testing methodologies to ensure the reliability and accuracy of gyroscopes in
-                  satellite applications with Matlab.
-                </li>
-                <li>
-                  Collaborated with the Space Solutions laboratory at the ITA Space Center CEI to assist in tests conducted
-                  on small satellites.
-                </li>
-              </ul>
+          <!-- Project 1 card -->
+          <a class="text-decoration-none text-reset" href="project-itasat2-hil.html">
+            <div class="project-card mb-4">
+              <img class="project-img" src="assets/img/project-1.jpg" alt="ITASAT-2 HIL project image" />
+              <div class="project-card-body">
+                <h3 class="mb-1">ITASAT-2 Hardware-in-the-Loop Roadmap for AOCS</h3>
+                <div class="project-meta mb-2">ITA Space Center (CEI) · E2MoC Lab · Ongoing</div>
+                <p class="mb-2">
+                  Defined an end-to-end HIL implementation roadmap to bring COTS components into a realistic AOCS
+                  verification flow, aligning simulation fidelity with embedded constraints.
+                </p>
+                <span class="project-cta">
+                  Open case study <i class="fas fa-arrow-right"></i>
+                </span>
+              </div>
             </div>
-            <div class="flex-shrink-0">
-              <span class="text-primary">September 2024 - December 2024</span>
+          </a>
+
+          <!-- Project 2 card -->
+          <a class="text-decoration-none text-reset" href="project-rocket-avionics.html">
+            <div class="project-card mb-4">
+              <img class="project-img" src="assets/img/project-2.jpg" alt="University rocket avionics project image" />
+              <div class="project-card-body">
+                <h3 class="mb-1">University Rocket Avionics and Ground Segment Communications</h3>
+                <div class="project-meta mb-2">UFSM · Latin America Space Challenge 2023</div>
+                <p class="mb-2">
+                  Co-founded UFSM’s first rocketry team and contributed to avionics architecture, communications,
+                  and test strategy for a 1 km-range university rocket.
+                </p>
+                <span class="project-cta">
+                  Open case study <i class="fas fa-arrow-right"></i>
+                </span>
+              </div>
             </div>
-          </div>
+          </a>
 
-          <!-- Tau Rocket Team -->
-          <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-            <div class="flex-grow-1">
-              <h3 class="mb-0">Tau Rocket Team, Universidade Federal de Santa Maria, Santa Maria - RS, Brazil</h3>
-              <div class="subheading mb-3">Electronics Department Developer</div>
-              <ul class="mb-0">
-                <li>
-                  Implemented a 500 m rocket's electrical subsystem and payload launched at the 2023 Latin American Space
-                  Cooperation competition.
-                </li>
-                <li>
-                  Designed PCBs with EasyEDA and validated rocket communication with LoRa in ESP32 boards.
-                </li>
-                <li>
-                  Published works in Regional Aerospace and Mechanical Engineering Symposium.
-                </li>
-              </ul>
+          <!-- Project 3 card -->
+          <a class="text-decoration-none text-reset" href="project-mems-gyro-manual.html">
+            <div class="project-card mb-4">
+              <img class="project-img" src="assets/img/project-3.jpg" alt="MEMS gyroscope characterization project image" />
+              <div class="project-card-body">
+                <h3 class="mb-1">MEMS Gyroscope Characterization Manual for Small-Satellite Navigation</h3>
+                <div class="project-meta mb-2">ITA Space Center · SPORT mission test data</div>
+                <p class="mb-2">
+                  Created a repeatable workflow using Allan variance and modeling to predict bias behavior in tri-axial
+                  MEMS gyroscopes, including an axis non-linearity assessment.
+                </p>
+                <span class="project-cta">
+                  Open case study <i class="fas fa-arrow-right"></i>
+                </span>
+              </div>
             </div>
-            <div class="flex-shrink-0">
-              <span class="text-primary">October 2021 - December 2023</span>
+          </a>
+
+          <!-- Project 4 card -->
+          <a class="text-decoration-none text-reset" href="project-nanosatcbr3-eps.html">
+            <div class="project-card">
+              <img class="project-img" src="assets/img/project-4.jpg" alt="NANOSATC-BR3 EPS concept project image" />
+              <div class="project-card-body">
+                <h3 class="mb-1">Electrical Power Subsystem Concept Definition for NANOSATC-BR3</h3>
+                <div class="project-meta mb-2">INPE · NANOSATC-BR family</div>
+                <p class="mb-2">
+                  Developed an EPS concept plan grounded in literature and heritage practices from NANOSATC-BR1 to support
+                  early design decisions and traceability for NANOSATC-BR3.
+                </p>
+                <span class="project-cta">
+                  Open case study <i class="fas fa-arrow-right"></i>
+                </span>
+              </div>
             </div>
-          </div>
-
-          <!-- INPE -->
-          <div class="d-flex flex-column flex-md-row justify-content-between">
-            <div class="flex-grow-1">
-              <h3 class="mb-0">National Institute for Space Research (INPE), Space Systems Engineering Laboratory, Santa Maria - RS, Brazil</h3>
-              <div class="subheading mb-3">Undergraduate Research Scholarship Holder</div>
-              <ul class="mb-0">
-                <li>
-                  Developed an Electrical Power Subsystem (EPS) concept for the NANOSATC-BR3, from the NANOSATC-BR Program
-                  as an undergraduate research project (PIBIC) with INCOSE’s systems engineering approach.
-                </li>
-                <li>
-                  Presented and published research project in 2020’s online SICINPE, INPE’s annual seminar for scientific
-                  research students.
-                </li>
-              </ul>
-            </div>
-            <div class="flex-shrink-0">
-              <span class="text-primary">April 2019 - July 2020</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <hr class="m-0" />
-
-      <!-- Education -->
-      <section class="resume-section" id="education">
-        <div class="resume-section-content">
-          <h2 class="mb-5">Education</h2>
-
-          <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-            <div class="flex-grow-1">
-              <h3 class="mb-0">Instituto Tecnológico de Aeronáutica (ITA), São José dos Campos - SP, Brazil</h3>
-              <div class="subheading mb-3">Master of Science in Aeronautical and Mechanical Engineering - Major in Space Engineering</div>
-              <p class="mb-1">Supervisor: Willer Gomes dos Santos, Ph.D.</p>
-              <p class="mb-0">Membership: E2MoC Lab: Space Systems Engineering, Orbital Mechanics and Control Research Group</p>
-            </div>
-            <div class="flex-shrink-0"><span class="text-primary">February 2025 - Ongoing</span></div>
-          </div>
-
-          <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-            <div class="flex-grow-1">
-              <h3 class="mb-0">Instituto Tecnológico de Aeronáutica (ITA), São José dos Campos - SP, Brazil</h3>
-              <div class="subheading mb-3">Postgraduate Degree: Specialization in Aviation Safety and Continuing Airworthiness (445 h)</div>
-              <p class="mb-0">Final Project: Sociotechnical safety analysis for a small satellite attitude and orbit control subsystem using STPA.</p>
-            </div>
-            <div class="flex-shrink-0"><span class="text-primary">January 2025 - November 2025</span></div>
-          </div>
-
-          <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-            <div class="flex-grow-1">
-              <h3 class="mb-0">Vrije Universiteit Brussel (VUB), Brussels, Belgium</h3>
-              <div class="subheading mb-3">Exchange Student: Master of Science in Electromechanical Engineering - Major in Aeronautics</div>
-            </div>
-            <div class="flex-shrink-0"><span class="text-primary">February 2023 - July 2023</span></div>
-          </div>
-
-          <div class="d-flex flex-column flex-md-row justify-content-between">
-            <div class="flex-grow-1">
-              <h3 class="mb-0">Universidade Federal de Santa Maria (UFSM), Santa Maria - RS, Brazil</h3>
-              <div class="subheading mb-3">Bachelor of Science: Major in Aerospace Engineering</div>
-              <p class="mb-1">Final Project: Test plan for gyroscope characterization with mathematical modelling applied to space navigation.</p>
-              <p class="mb-0">
-                Memberships: NANOSATC-BR, Development of Nanosats Research Group. Member of the Pilot School of Mechanical Engineering.
-                Member of ABCM’s XXVIII Mechanical Engineering Students’ National Congress Commission. Tau Rocket Team’s Electronic Department.
-                Member of GEPROP - Propulsion Research Group.
-              </p>
-            </div>
-            <div class="flex-shrink-0"><span class="text-primary">March 2019 - December 2024</span></div>
-          </div>
-        </div>
-      </section>
-
-      <hr class="m-0" />
-
-      <!-- Skills -->
-      <section class="resume-section" id="skills">
-        <div class="resume-section-content">
-          <h2 class="mb-5">Skills</h2>
-
-          <div class="subheading mb-3">CAE</div>
-          <p>SolidWorks, SolidWorks Simulation, Ansys Fluent, STK, FreeFlyer, Capella</p>
-
-          <div class="subheading mb-3">Electronics</div>
-          <p>Arduino, ESP32, Raspberry Pi</p>
-
-          <div class="subheading mb-3">Programming languages</div>
-          <p>C/C++, Python, Matlab, Simulink</p>
-
-          <div class="subheading mb-3">Office and writing</div>
-          <p>Microsoft Office, Google Docs, Latex</p>
-
-          <div class="subheading mb-3">Languages</div>
-          <p class="mb-0">Portuguese (native), English (fluent), French, and Spanish (intermediate)</p>
-        </div>
-      </section>
-
-      <hr class="m-0" />
-
-      <!-- Certifications -->
-      <section class="resume-section" id="certifications">
-        <div class="resume-section-content">
-          <h2 class="mb-3">Certifications</h2>
-          <ul class="fa-ul mb-0">
-            <li>
-              <span class="fa-li"><i class="fas fa-certificate text-primary"></i></span>
-              Placeholder certification 1
-            </li>
-            <li>
-              <span class="fa-li"><i class="fas fa-certificate text-primary"></i></span>
-              Placeholder certification 2
-            </li>
-            <li>
-              <span class="fa-li"><i class="fas fa-certificate text-primary"></i></span>
-              Placeholder certification 3
-            </li>
-          </ul>
+          </a>
         </div>
       </section>
 
