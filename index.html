@@ -31,76 +31,61 @@
     <link href="css/styles.css" rel="stylesheet" />
 
     <!-- Theme color override (subtle dark blue) -->
+   <!-- Add/keep this inside your <style> block in index.html -->
+
     <style>
-      :root {
+    :root {
         --bf-primary: #0b1f3a;
         --bf-primary-2: #12345f;
-      }
+    }
 
-      .bg-primary { background-color: var(--bf-primary) !important; }
-      .text-primary { color: var(--bf-primary) !important; }
+    .bg-primary { background-color: var(--bf-primary) !important; }
+    .text-primary { color: var(--bf-primary) !important; }
 
-      a { color: var(--bf-primary); }
-      a:hover, a:focus { color: var(--bf-primary-2); }
+    a { color: var(--bf-primary); }
+    a:hover, a:focus { color: var(--bf-primary-2); }
 
-      .social-icons .social-icon:hover { background-color: var(--bf-primary) !important; }
-      .navbar-dark .navbar-nav .nav-link.active,
-      .navbar-dark .navbar-nav .nav-link:hover { color: #ffffff !important; }
-
-      /* Buttons, to match the theme */
-      .btn-primary {
+    /* Button styling: white text for legibility */
+    .btn-primary {
         background-color: var(--bf-primary) !important;
         border-color: var(--bf-primary) !important;
-      }
-      .btn-primary:hover,
-      .btn-primary:focus {
+        color: #ffffff !important;
+    }
+    .btn-primary:hover,
+    .btn-primary:focus,
+    .btn-primary:active {
         background-color: var(--bf-primary-2) !important;
         border-color: var(--bf-primary-2) !important;
-      }
+        color: #ffffff !important;
+    }
 
-      /* Reduce vertical spacing between sections */
-      .resume-section {
-        padding-top: 2.5rem !important;
-        padding-bottom: 2.5rem !important;
-      }
-
-      hr.m-0 { opacity: 0.15; }
-
-
-      .project-card {
+    /* Keep hover-lift effect on the card */
+    .project-card {
         border: 1px solid rgba(0,0,0,0.10);
         border-radius: 0.75rem;
         overflow: hidden;
-      }
+        transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .project-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 22px rgba(0,0,0,0.10);
+    }
 
-      .project-card:hover {
-        transform: none;
-        box-shadow: none;
-      } 
-
-      .project-img {
+    .project-img {
         width: 100%;
         height: 220px;
         object-fit: cover;
         display: block;
-      }
+    }
 
-      .project-card-body {
-        padding: 1rem 1.25rem;
-      }
+    .project-card-body { padding: 1rem 1.25rem; }
 
-      .project-meta {
+    .project-meta {
         color: rgba(0,0,0,0.60);
         font-size: 0.95rem;
-      }
-
-      .project-cta {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.4rem;
-        font-weight: 700;
-      }
+    }
     </style>
+
   </head>
 
   <body id="page-top">
